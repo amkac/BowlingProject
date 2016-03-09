@@ -66,7 +66,6 @@ public class ScoreBoardTest {
 
         int score2 = sb.calculateScore(myScore2);
         assertEquals(score2, 90);
-
         ArrayList<Frame> myScore3 = new ArrayList<Frame>();
         myScore3.add(new Frame(9, 0));
         myScore3.add(new Frame(9, 1));
