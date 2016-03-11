@@ -4,30 +4,49 @@ package dcll.akac;
  * Created by rottanaly on 3/8/16.
  */
 public class Frame {
-    private int firstTry = 0; // score de preimier essai
-    private int secondTry = 0; // score de deuxieme essai
-
-    /* Constructeur */
+    /**
+     * score de preimier essai.
+     */
+    private int firstTry = 0;
+    /**
+     * score de deuxieme essai.
+     */
+    private int secondTry = 0;
+    /**
+     * constructeur.
+     * @param a the firstTry
+     * @param b the secondTry
+     */
     public Frame(final int a, final int b) {
         firstTry = a;
         secondTry = b;
     }
 
-    /* Acceder au score de premier essai */
+    /**
+     * Acceder au score de premier essai.
+     * @return firstTry
+     */
     int getFirstScore() {
         return firstTry;
     }
 
-    /* Score totale de chaque frame */
-    int getTotalScore(){
+    /**
+     * Score totale de chaque frame.
+     * @return firstTry + secondTry
+     */
+    int getTotalScore() {
         return firstTry + secondTry;
     }
 
+    /**
+     * retourner le status de la frame.
+     * @return status
+     */
     int getStatus() {
-        if(getFirstScore()==10) {
+        if (getFirstScore() == 10) {
             return 2; // strike
         }
-        if(getTotalScore()==10) {
+        if (getTotalScore() == 10) {
             return 1; // spare
         }
         return 0; // normal
