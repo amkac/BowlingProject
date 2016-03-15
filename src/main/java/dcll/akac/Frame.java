@@ -13,6 +13,10 @@ public class Frame {
      */
     private int secondTry = 0;
     /**
+     * Score maximum.
+     */
+    static final int MAX_SCORE = 10;
+    /**
      * constructeur.
      * @param a the firstTry
      * @param b the secondTry
@@ -26,7 +30,7 @@ public class Frame {
      * Acceder au score de premier essai.
      * @return firstTry
      */
-    int getFirstScore() {
+    final int getFirstScore() {
         return firstTry;
     }
 
@@ -34,7 +38,7 @@ public class Frame {
      * Score totale de chaque frame.
      * @return firstTry + secondTry
      */
-    int getTotalScore() {
+    final int getTotalScore() {
         return firstTry + secondTry;
     }
 
@@ -42,11 +46,11 @@ public class Frame {
      * retourner le status de la frame.
      * @return status
      */
-    int getStatus() {
-        if (getFirstScore() == 10) {
+    final int getStatus() {
+        if (getFirstScore() == MAX_SCORE) {
             return 2; // strike
         }
-        if (getTotalScore() == 10) {
+        if (getTotalScore() == MAX_SCORE) {
             return 1; // spare
         }
         return 0; // normal
